@@ -2,3 +2,4 @@
 /vendor/zdorovo/micro/.git
 composer.lock
 TODO.txt
+/public/php_errors.log

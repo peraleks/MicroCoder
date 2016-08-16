@@ -1,5 +1,6 @@
 <?php
 
-require __DIR__ . '/Autoloader.php';
+require __DIR__.'/../vendor/autoload.php';
+// require __DIR__.'/Autoload.php';
 
-return new Autoloader;
+new Autoloader;

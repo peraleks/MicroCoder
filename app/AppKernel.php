@@ -1,6 +1,6 @@
 <?php
 
-use Microcode\Kernel\Kernel;
+use Micro\Kernel\Kernel;
 
 /**
 * Kernel

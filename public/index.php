@@ -2,10 +2,14 @@
 
 $loader = require __DIR__.'/../app/autoload.php';
 
-var_dump($loader);
+d::m();
+d::p($_SERVER);
 
-\d::m();
+echo '<pre>';
+print_r(spl_autoload_functions());
+echo '</pre>';
+
+d::m();
 
 $kernel = new AppKernel;
 
-\d::m();
