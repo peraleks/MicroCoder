@@ -1,0 +1,15 @@
+<?php
+
+use Microcode\Kernel\Kernel;
+
+/**
+* Kernel
+*/
+class AppKernel extends Kernel
+{
+	
+	// function __construct()
+	// {
+	// 	parent::__construct;
+	// }
+}

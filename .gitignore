@@ -1,0 +1,4 @@
+/vendor
+/vendor/zdorovo/micro/.git
+composer.lock
+TODO.txt

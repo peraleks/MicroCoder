@@ -1,0 +1,28 @@
+{
+    "name": "zdorovo/microcoder",
+    "type": "project",
+    "description": "MicroCoder",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexei Perevoshchikov",
+            "email": "zdorovoveselo@gmail.com"
+        }
+    ],
+
+    "require": {
+        "php":">=5.5.9",
+        "zdorovo/microcoder":"dev-master"
+    },
+
+    "repositories":[
+        {
+            "type":"vcs",
+            "url":"https://github.com/zdorovoveselo/microcoder"
+        }
+    ],
+
+    
+    "minimum-stability":"dev"
+
+}
