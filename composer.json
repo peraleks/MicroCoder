@@ -12,13 +12,13 @@
 
     "require": {
         "php":">=5.5.9",
-        "zdorovo/microcoder":"dev-master"
+        "zdorovo/micro":"dev-master"
     },
 
     "repositories":[
         {
             "type":"vcs",
-            "url":"https://github.com/zdorovoveselo/microcoder"
+            "url":"https://github.com/zdorovoveselo/Micro"
         }
     ],
 
