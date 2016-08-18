@@ -22,7 +22,14 @@ class Autoloader
     {
         $this->lastMap = &$this->spaceMap;
         $this->spaceMap['lastName'] = $name;
-        $this->spaceMap[$name]['path'] = $path;
+
+        array_key_exists($name, $this->spaceMap)
+            ?: $this->spaceMap[$name] = [];
+
+        array_key_exists('path', $this->spaceMap[$name])
+            ?: $this->spaceMap[$name]['path'] = [];
+
+        $this->spaceMap[$name]['path'][] .= $path;
 
         return $this;
     }
@@ -33,7 +40,14 @@ class Autoloader
         $arr = explode('/', $path);
         $name = array_pop($arr);
         $this->classMap['lastName'] = $name;
-        $this->classMap[$name]['path'] = implode('/', $arr);
+
+        array_key_exists($name, $this->classMap)
+            ?: $this->classMap[$name] = [];
+
+        array_key_exists('path', $this->classMap[$name])
+            ?: $this->classMap[$name]['path'] = [];
+
+        $this->classMap[$name]['path'][] .= implode('/', $arr);
 
         return $this;
     }
@@ -48,49 +62,44 @@ class Autoloader
     private function microLoader($className)
     {
         $exploded_name = explode('\\', $className);
-
         $this->space = array_shift($exploded_name);
-
-        echo '<br>'.$this->space.'<br>';
-
         if (empty($exploded_name)) {
-            if ($path = $this->existInMap($this->space, $this->classMap)) {
-                $this->includeFile($path, $this->classMap, true);
+            if (array_key_exists($this->space, $this->classMap)) {
+                $this->includeFile($this->space, $this->classMap, true);
             } else {
                 $this->globalName();
             }
-        } elseif ($path = $this->existInMap(implode('/', $exploded_name), $this->spaceMap)) {
-            $this->includeFile($path, $this->spaceMap);
+        } elseif (array_key_exists($this->space, $this->spaceMap)) {
+            $this->includeFile(implode('/', $exploded_name), $this->spaceMap);
         }
     }
 
-    private function existInMap($class, $map)
+    private function includeFile($class, $map, $global = false)
     {
-        if (array_key_exists($this->space, $map)) {
-            return $this->baseDir.$map[$this->space]['path'].'/'.$class.'.php';
-        } else {
-            return false;
-        }
-    }
-
-    private function includeFile($path, $map, $global = false)
-    {
-        if (array_key_exists('strict', $map[$this->space])) {
-            require $path;
-        } else {
-            if (file_exists($path)) {
+        $count = count($map[$this->space]['path']) - 1;
+        for ($i = 0; $i <= $count; ++$i) {
+            $path = $this->baseDir.$map[$this->space]['path'][$i].'/'.$class.'.php';
+            if (($i == $count) && array_key_exists('strict', $map[$this->space])) {
                 require $path;
-            } elseif ($global) {
-                $this->globalName();
+
+                return;
+            } else {
+                if (file_exists($path)) {
+                    require $path;
+
+                    return;
+                }
             }
         }
+        !$global ?: $this->globalName();
     }
 
-    private function globalName() {
+    private function globalName()
+    {
         if (array_key_exists('', $this->spaceMap)) {
-            $path = $this->baseDir.$this->spaceMap['']['path'].'/'.$this->space.'.php';
+            $class = $this->space;
             $this->space = '';
-            $this->includeFile($path, $this->spaceMap);
+            $this->includeFile($class, $this->spaceMap);
         }
     }
 }

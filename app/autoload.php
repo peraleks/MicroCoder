@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__.'/../vendor/autoload.php';
+// require __DIR__.'/../vendor/autoload.php';
 
 require __DIR__.'/Autoloader.php';
 $loader = new Autoloader;
@@ -8,7 +8,7 @@ $loader = new Autoloader;
 $loader->space('app', '/app')->strict()
 	   ->space('Micro', '/vendor/zdorovo/micro/Micro')->strict()
 	   ->class('/vendor/zdorovo/micro/Micro/Debug/d')->strict()
-	   ->space('', '/app/d')->strict();
+	   ->space('', '/app')->strict();
 
 	  	echo '<pre>';
         print_r($loader);
