@@ -1,5 +1,5 @@
 <?php
-
+namespace app;
 use Micro\Kernel\Kernel;
 
 /**
@@ -8,8 +8,4 @@ use Micro\Kernel\Kernel;
 class AppKernel extends Kernel
 {
 	
-	// function __construct()
-	// {
-	// 	parent::__construct;
-	// }
 }

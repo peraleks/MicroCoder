@@ -9,7 +9,3 @@ $loader->space('app', '/app')->strict()
 	   ->space('Micro', '/vendor/zdorovo/micro/Micro')->strict()
 	   ->class('/vendor/zdorovo/micro/Micro/Debug/d')->strict()
 	   ->space('', '/app')->strict();
-
-	  	echo '<pre>';
-        print_r($loader);
-        echo '</pre>';
