@@ -7,17 +7,8 @@ $loader = new Autoloader;
 
 $loader->space('app', '/app')->strict()
 
-	   ->space('Micro', [
-		    '/vendor/zdorovo/micro',
-		    '/vendor/zdorovo',
-		   	'/vendor/zdorovo/micro/Micro',
-		    ])
+	   ->space('Micro', '/vendor/zdorovo/micro/Micro')->strict()
 
-	   ->class([
-	   		'/vendor/m',
-	   		'/vendor/zdorovo/k',
-	   		'/vendor/zdorovo/micro/l',
-	   		'/vendor/zdorovo/micro/Micro/Debug/d',
-	   		])->strict()
+	   ->globalClass('/vendor/zdorovo/micro/Micro/Debug/d')->strict()
 
 	   ->space('', '/app')->strict();

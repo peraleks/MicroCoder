@@ -20,7 +20,7 @@ class Autoloader
      * Содержит ссылку на карту ($lastMap | $spaceMap),
      * в которую производилась запись в последний раз
      * 
-     * @var link
+     * @var array
      */
     private $lastMap;
 
@@ -42,8 +42,6 @@ class Autoloader
     /**
      * Регистрирует функцию автозагрузчика и
      * и корневую директорию
-     * 
-     * @return void
      */
     public function __construct()
     {
@@ -81,7 +79,7 @@ class Autoloader
      * @param string $path  путь содержащий имя класса(файла без расширения)
      * @return object($this)
      */
-    public function class($path)
+    public function globalClass($path)
     {
         $this->lastMap = &$this->classMap;
         if (is_array($path)) {
@@ -185,12 +183,12 @@ class Autoloader
         for ($i = 0; $i <= $count; ++$i) {
             $path = $this->baseDir.$map[$this->space]['path'][$i].'/'.$class.'.php';
             if (($i == $count) && array_key_exists('strict', $map[$this->space])) {
-                require $path;
+                include $path;
 
                 return;
             } else {
                 if (file_exists($path)) {
-                    require $path;
+                    include $path;
 
                     return;
                 }
