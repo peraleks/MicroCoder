@@ -1,13 +1,11 @@
 <?php
+require __DIR__.'/../vendor/zdorovo/micro/Micro/Debug/Error/ErrorHandler.php';
+new ErrorHandler;
+
 require __DIR__.'/../app/autoload.php';
 
 d::m();
 
-// d::p($_SERVER);
-
-// d::p(spl_autoload_functions());
-
-
-$kernel = new app\AppKernel;
+new app\AppRoot;
 
 d::m();

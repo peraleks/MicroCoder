@@ -1,0 +1,797 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"hig",
+				"highlight_string"
+			],
+			[
+				"array_key",
+				"array_key_exists"
+			],
+			[
+				"Blog",
+				"BlogRouters"
+			],
+			[
+				"php",
+				"phpinfo"
+			],
+			[
+				"is_a",
+				"is_array"
+			],
+			[
+				"this",
+				"this-space"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"spa",
+				"space_map"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"base",
+				"baseDir"
+			],
+			[
+				"explod",
+				"exploded_name"
+			],
+			[
+				"file_",
+				"file_exists"
+			],
+			[
+				"spl_au",
+				"spl_autoload_functions"
+			],
+			[
+				"cla",
+				"className"
+			],
+			[
+				"ep",
+				"exploded_name"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"explo",
+				"exploded_name"
+			],
+			[
+				"url",
+				"urldecode"
+			],
+			[
+				"count",
+				"count_routes"
+			],
+			[
+				"preg_ma",
+				"preg_match_all"
+			],
+			[
+				"L",
+				"Lpow"
+			],
+			[
+				"g",
+				"get	Get Elements"
+			],
+			[
+				"backgroud",
+				"background-color"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"list-s",
+				"list-style"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"bx",
+				"bxsh	box-shadow: ${1:inset }${2:hoff} ${3:voff} ${4:blur} ${5:color};"
+			],
+			[
+				"bs",
+				"box-shadow"
+			],
+			[
+				"rgb",
+				"rgba(r,g,b,a)"
+			],
+			[
+				"rg",
+				"rgba(r,g,b,a)"
+			],
+			[
+				"he",
+				"header	Tag"
+			],
+			[
+				"header_",
+				"header_color"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"ff",
+				"ff-ss	font-family: sans-serif;"
+			],
+			[
+				"li",
+				"link	Tag"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"mysql_e",
+				"mysql_escape_string"
+			],
+			[
+				"actio",
+				"action_index"
+			],
+			[
+				"action_",
+				"action_404"
+			],
+			[
+				"ALL",
+				"All"
+			],
+			[
+				"chi",
+				"child"
+			],
+			[
+				"make",
+				"make_full_url"
+			],
+			[
+				"sc",
+				"scripts"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"bo",
+				"border-top"
+			],
+			[
+				"z",
+				"z	z-index"
+			],
+			[
+				"tr",
+				"trs	transition: ${1:prop} ${2:time};"
+			],
+			[
+				"bl",
+				"block"
+			],
+			[
+				"bordec",
+				"border-color"
+			],
+			[
+				"border",
+				"border-style"
+			],
+			[
+				"backgron",
+				"background-color"
+			],
+			[
+				"h",
+				"hsla()"
+			],
+			[
+				"com",
+				"colmrc	column-rule-color"
+			],
+			[
+				"colm",
+				"colmf	column-fill"
+			],
+			[
+				"colmg",
+				"colmg	column-gap"
+			],
+			[
+				"co",
+				"colmr	column-rule"
+			],
+			[
+				"fons",
+				"font-style"
+			],
+			[
+				"fo",
+				"fonts"
+			],
+			[
+				"st",
+				"style	Tag"
+			],
+			[
+				"re",
+				"required	Attr"
+			],
+			[
+				"r",
+				"required	Attr"
+			],
+			[
+				"blo",
+				"inline-block"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"borr",
+				"border-radius"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"bg",
+				"bg+	background: ${1:#fff} url(${2}) ${3:0} ${4:0} ${5:no-repeat};"
+			],
+			[
+				"bd",
+				"bd+	border: ${1:1px} ${2:solid} ${3:#000};"
+			],
+			[
+				"ma",
+				"mark	Tag"
+			],
+			[
+				"fi",
+				"figcaption	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Local Dependency"
+			],
+			[
+				"Package Control: soda",
+				"Package Control: Install Local Dependency"
+			]
+		],
+		"width": 450.0
+	},
+	"console":
+	{
+		"height": 160.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/W/dev/site/index.php",
+		"/W/dev/micro/public/errors.php",
+		"/D/Перенос/mint/work/ErrorHendler/app/errors.php",
+		"/D/Перенос/mint/work/ErrorHendler/web/index.php",
+		"/D/Перенос/mint/work/ErrorHendler/vendor/liw/core/ErrorHandler.php",
+		"/W/dev/test/public/index.php",
+		"/W/dev/micro/app/Autoloader.php",
+		"/W/dev/micro/app/autoload.php",
+		"/W/dev/micro/vendor/zdorovo/micro/Micro/Request/Request.php",
+		"/W/dev/micro/vendor/zdorovo/micro/Micro/Root/Root.php",
+		"/W/dev/micro/app/AppRoot.php",
+		"/W/dev/symfony/web/app_dev.php",
+		"/W/dev/test/bootstrap/app.php",
+		"/W/dev/symfony/web/app.php",
+		"/W/dev/micro/vendor/zdorovo/micro/Micro/Root/Kernel.php",
+		"/W/dev/symfony/app/AppKernel.php",
+		"/W/dev/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php",
+		"/W/dev/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernelInterface.php",
+		"/W/dev/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Bundle/Bundle.php",
+		"/W/dev/symfony/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Bundle/BundleInterface.php",
+		"/W/dev/micro/app/AppKernel.php",
+		"/W/dev/micro/vendor/zdorovo/micro/Micro/Routing/UserRouter.php",
+		"/W/dev/micro/vendor/zdorovo/micro/Micro/Debug/d.php",
+		"/W/dev/php/app/Power.php",
+		"/W/dev/php/index_old.php",
+		"/W/dev/test/vendor/laravel/framework/src/Illuminate/Foundation/Application.php",
+		"/W/dev/composer/composer.json",
+		"/W/dev/test/config/app.php",
+		"/W/dev/test/vendor/laravel/framework/src/Illuminate/Auth/AuthServiceProvider.php",
+		"/W/dev/test/vendor/laravel/framework/src/Illuminate/Support/ServiceProvider.php",
+		"/W/dev/composer/vendor/composer/autoload_psr4.php",
+		"/W/dev/composer/tests/BuilderTest.php",
+		"/W/dev/composer/examples/example1.php",
+		"/W/dev/composer/vendor/pimple/pimple/src/Pimple/ServiceProviderInterface.php",
+		"/W/dev/composer/vendor/pimple/pimple/src/Pimple/Container.php",
+		"/W/dev/composer/vendor/pimple/pimple/composer.json",
+		"/W/dev/micro/vendor/zdorovo/micro/Micro/Routing/Router.php",
+		"/W/dev/test/config/filesystems.php",
+		"/W/dev/test/config/services.php",
+		"/W/dev/test/app/Providers/AppServiceProvider.php",
+		"/W/dev/test/app/Http/Requests/Request.php",
+		"/W/dev/test/app/Http/Kernel.php",
+		"/W/Programs/SublimeText/Data/Packages/User/phpcs.sublime-settings",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/W/Doc/Server.php",
+		"/W/Programs/SublimeText/Data/Packages/Phpcs/phpcs.sublime-settings",
+		"/W/Programs/SublimeText/Data/Packages/User/SublimeLinter.sublime-settings",
+		"/W/Programs/UwAmp/bin/apache/conf/httpd_uwamp.conf",
+		"/D/1@1/Denwer/home/server/www/micro/app/Autoloader.php",
+		"/W/dev/test/vendor/laravel/framework/src/Illuminate/Auth/Access/Gate.php",
+		"/W/dev/test/vendor/laravel/framework/src/Illuminate/Auth/Authenticatable.php",
+		"/W/dev/micro/vendor/composer/ClassLoader.php",
+		"/W/dev/micro/vendor/composer/autoload_psr4.php",
+		"/W/dev/micro/app/d.php",
+		"/W/dev/micro/app/d/d.php",
+		"/W/dev/symfony/vendor/composer/autoload_static.php",
+		"/W/dev/test/composer.json",
+		"/W/dev/symfony/composer.json",
+		"/W/dev/symfony/vendor/composer/autoload_classmap.php",
+		"/W/dev/symfony/vendor/composer/autoload_files.php",
+		"/W/dev/symfony/vendor/composer/autoload_namespaces.php",
+		"/W/dev/symfony/vendor/composer/autoload_psr4.php",
+		"/W/dev/micro/vendor/autoload.php",
+		"/W/dev/micro/vendor/composer/autoload_real.php",
+		"/W/dev/symfony/index.php",
+		"/W/dev/micro/vendor/zdorovo/micro/Micro/Kernel/Kernel.php",
+		"/W/dev/micro/app/routes.php",
+		"/W/dev/php/app/Autoloader.php",
+		"/W/dev/test/bootstrap/autoload.php",
+		"/W/dev/micro/.gitignore",
+		"/W/dev/micro/vendor/zdorovo/micro/.git/config",
+		"/W/dev/micro/composer.json",
+		"/W/dev/micro/vendor/zdorovo/micro/composer.json",
+		"/W/dev/test/.gitignore",
+		"/W/dev/symfony/.gitignore",
+		"/W/dev/composer2/composer.json",
+		"/W/dev/symfony/vendor/symfony/symfony/composer.json",
+		"/W/dev/micro/vendor/zdorovo/micro/.gitignore",
+		"/W/dev/composer2/vendor/composer/autoload_psr4.php",
+		"/W/dev/test/vendor/laravel/framework/composer.json",
+		"/W/dev/composer2/vendor/zdorovo/micro/.gitignore",
+		"/W/dev/composer2/index.php",
+		"/W/dev/composer/.gitignore",
+		"/W/dev/composer/Micro/Routing/Router.php",
+		"/W/dev/composer/Micro/Request/Request.php",
+		"/W/dev/composer/Micro/Kernel/Kernel.php",
+		"/W/Doc/Laravel.php",
+		"/C/Users/x/AppData/Local/Temp/Mxt91/RemoteFiles/2491858_2_0/index.php",
+		"/W/dev/symfony/vendor/sensiolabs/security-checker/.gitignore",
+		"/W/dev/symfony/vendor/swiftmailer/swiftmailer/.gitignore",
+		"/W/dev/symfony/vendor/swiftmailer/swiftmailer/composer.json",
+		"/W/dev/symfony/vendor/swiftmailer/swiftmailer/phpunit.xml.dist",
+		"/W/dev/symfony/vendor/sensiolabs/security-checker/composer.json",
+		"/W/dev/composer2/vendor/zdorovo/microcode/index.php",
+		"/W/dev/composer2/vendor/composer/autoload_namespaces.php",
+		"/W/dev/composer2/vendor/autoload.php",
+		"/W/dev/composer2/vendor/zdorovo/microcode/.gitignore",
+		"/W/Doc/Git",
+		"/W/dev/composer2/vendor/composer/autoload_classmap.php",
+		"/W/dev/composer/src/Microcode/Routing/Router.php",
+		"/W/dev/composer/src/Microcode/Request/Request.php",
+		"/W/dev/composer/src/Microcode/Kernel/Kernel.php",
+		"/W/dev/composer/src/Microcode/Debug/d.php",
+		"/W/dev/composer2/vendor/composer/autoload_real.php",
+		"/W/dev/micro/public/index.php",
+		"/W/dev/micro/vendor/microcode/framework/src/Microcode/Routing/Router.php",
+		"/W/dev/micro/vendor/microcode/framework/src/Microcode/Request/Request.php",
+		"/W/dev/micro/vendor/microcode/framework/src/Microcode/Kernel/Kernel.php",
+		"/W/Programs/SublimeText/Data/Packages/User/Preferences.sublime-settings",
+		"/W/dev/micro/app/config/AppKernel.php",
+		"/W/dev/php/index.php",
+		"/W/dev/php/app/Kernel.php",
+		"/W/dev/php/app/Request.php",
+		"/W/dev/php/app/Router.php",
+		"/W/dev/micro/boot/Autoloader.php",
+		"/W/dev/test/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+		"/W/dev/symfony/app/autoload.php",
+		"/W/dev/symfony/vendor/autoload.php",
+		"/W/dev/symfony/src/Zdorovo/BlogBundle/Resources/config/config.yml",
+		"/W/dev/symfony/src/Zdorovo/BlogBundle/Resources/config/routing.yml",
+		"/W/dev/symfony/src/Zdorovo/BlogBundle/Resources/config/services.yml",
+		"/W/dev/symfony/src/Zdorovo/BlogBundle/ZdorovoBlogBundle.php",
+		"/W/dev/test/storage/framework/views/0c92f88ca031f9d57cde3f56c149fbfebdeed8f5.php",
+		"/W/dev/php/app/Pow.php",
+		"/W/Programs/SublimeText/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/W/Programs/SublimeText/Data/Packages/Phpcs/Default (Windows).sublime-keymap",
+		"/C/php/pear/PHP/CodeSniffer/Standards/PHPCS/ruleset.xml",
+		"/C/php/pear/PHP/CodeSniffer/Standards/PSR2/ruleset.xml"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"<project>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"this",
+			"$subName",
+			"$split",
+			"$arr['split']",
+			"groupEnd",
+			"url_route",
+			"BlogRouters",
+			"blogr",
+			"expName",
+			"exploded_name",
+			"echo",
+			"class_map",
+			"space_map",
+			"map",
+			"echo '<pre>",
+			"echo \"",
+			"print_r(",
+			"::map(",
+			"->map(",
+			" map(",
+			"map(",
+			"mapWebRoutes",
+			"routes.php",
+			"function make",
+			"bind",
+			"dd",
+			"bracke",
+			"package",
+			"name",
+			"определено",
+			"site2",
+			"56",
+			"site2",
+			"dev",
+			"mAdminPages",
+			"M_Admin_Pages",
+			"select",
+			"*",
+			"nav",
+			"figure",
+			"columns",
+			"action",
+			"type",
+			"snake",
+			"img_nut",
+			"img_nat",
+			"cur",
+			"messg",
+			"alert",
+			"start",
+			"hake",
+			"shake",
+			"Score",
+			"shakeEat",
+			"Score",
+			"rost",
+			"eated",
+			"frut",
+			"yellow",
+			"\n			",
+			"none",
+			"Serch",
+			"margin",
+			"hover",
+			"450px",
+			"accordion",
+			"that.start",
+			");\n",
+			"*",
+			"sl.",
+			"sl",
+			" \n",
+			"=",
+			"elem.",
+			"h[1]",
+			"h[0]",
+			"moov",
+			"sq",
+			"*",
+			"delete",
+			"getby",
+			"ClearSessions",
+			"*",
+			"sql",
+			"msql",
+			"sql",
+			"header",
+			"GetUid",
+			"GetByLogin",
+			"$_GET",
+			"$_GET['act']",
+			"log",
+			"oment",
+			"coment",
+			"комент",
+			"$mArticles",
+			"M_Articles::",
+			"protect",
+			"Protect",
+			"Pronect",
+			"	\n",
+			"border",
+			" $",
+			"private",
+			"pre",
+			"$fn",
+			"img/",
+			"else",
+			"head",
+			"entity.name.class",
+			"color",
+			"outline",
+			"resalt",
+			";\n",
+			"#content_center",
+			"#content_left",
+			"up",
+			"10px",
+			"back_left_li",
+			"href",
+			"back_left_top",
+			"32",
+			"right",
+			"0",
+			"main_menu",
+			"0px",
+			"10px",
+			"<td>\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$subArr",
+			"$splitUrl",
+			"$split",
+			"urlRoute",
+			"explName",
+			"expName",
+			"classMap",
+			"spaceMap",
+			"space_map",
+			"mPages",
+			"M_Pages",
+			"^",
+			"nake",
+			"snake",
+			"growth",
+			"^",
+			"slider.",
+			"slider",
+			"^",
+			"col",
+			"row",
+			"move",
+			"shake",
+			"^",
+			"msql",
+			"$this->params[1]",
+			"omment",
+			"comment",
+			"коммент",
+			"$this->mArticles->",
+			"$this->mArticles",
+			"$mArticles->",
+			"$file['name']",
+			"$dir/",
+			"$dir",
+			"result",
+			"section",
+			"aside",
+			"</td>"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 218.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,12 +1,19 @@
 <?php
+$Router->safeMode()
 
-$Router->add('/{id}/blog', 'BlogController@index')
-	->method('POST | GET');
+->group('/blog')
+	->route('/{id}', 'BlogController')->post('add')
 
-$Router->add('/гоша/жопа/{id}', 'BlogController@index')
-	->method('POST | GET');
+	->route('/гоша/хороший/', 'BlogController')->post('dell')->name('Тридцатый')
+->groupEnd()
+	
+	->route('/blog/articles/{id}/blog/{category}/{id}', 'BlogController@index')->name('Главная')
 
-$Router->add('/blog/articles/{id}/blog/{category}/{id}', 'BlogController@index');
-
-$Router->add('/', 'BlogController@index')
-	->method('GET');
+->group('/shop')
+	->route('/', 'BlogController')->name('Главная')
+->groupEnd()
+				
+->route('/30', 'BlogController')->name('Тридцатый')
+	->get('action')
+	->post('postAction')
+;
