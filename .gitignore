@@ -3,5 +3,4 @@
 composer.lock
 TODO.txt
 /public/php_errors.log
-micro.sublime-project
-micro.sublime-workspace
+

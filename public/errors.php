@@ -8,11 +8,11 @@ array_key_exists('key', NULL);
 // NONFATAL - E_STRICT
 class c {function f(){}} c::f();
 // NONFATAL - E_USER_DEPRECATED
-trigger_error("E_USER_DEPRECATED", E_USER_DEPRECATED);
+// trigger_error("E_USER_DEPRECATED", E_USER_DEPRECATED);
 // NONFATAL - E_USER_WARNING
-trigger_error("E_USER_WARNING", E_USER_WARNING);
+// trigger_error("E_USER_WARNING", E_USER_WARNING);
 // NONFATAL - E_USER_NOTICE
-trigger_error("E_USER_NOTICE", E_USER_NOTICE);
+// trigger_error("E_USER_NOTICE", E_USER_NOTICE);
 
 // FATAL, если не обработана функцией set_error_handler - E_RECOVERABLE_ERROR
 // class b {function f(int $a){}} $b = new b; $b->f(NULL);
