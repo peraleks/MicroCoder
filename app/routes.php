@@ -1,26 +1,25 @@
 <?php
-$Router->safeMode()
+$Router
+// ->safeMode(false)
 
-->group('/blog')
+->group('/blog1')
 
-	->route('/{id}', 'BlogController')
-	 ->post('add')
 
-	->route('/гоша/хороший/', 'BlogController')->name('Тридцатый')
-	 ->post('dell')	
+		->route('/{id}', 'BlogController')->name('regex')
+		 ->post('add')
+		 ->get('action')
 
-->groupEnd()
-
-->group('/shop')
-
-	->route('/', 'BlogController')->name('Главная')
 
 ->groupEnd()
-				
-->route('/30', 'BlogController')->name('Тридцатый1')
-  ->get('action')
- ->post('postAction')
 
-->route('/blog/articles/{id}/blog/{category}/{id}', 'BlogController')
- ->post('post')
+->group('/blog4')
+	->includeFile(__DIR__.'/ro.php')
+->groupEnd()
+
+		->route('/гоша/хороший/', 'BlogController')
+		->name('Тридцатый')
+		 ->post('dell')
+		 ->get('action')
 ;
+
+// \d::p($this);
