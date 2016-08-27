@@ -1,11 +1,20 @@
 <?php
 $Router
-  ->route('/list/{id}', 'BlogController')
- ->post('post')
- ->get('action')
+->notSafe()
 
+->group('/222222')
 
-  ->route('/list/articles', 'BlogController')
- ->post('post')
- ->get('action')
+	  ->route('/list2/{id}', 'BlogController')
+	   ->post('post')
+	    ->get('post')
+
+	  ->route('/list/{id}', 'Blog')
+	   ->post('post')
+	    ->get('post')
+
+	  ->route('/list/articles', 'BlogController')
+	   ->post('post1')
+	    ->get('action')
+
+->groupEnd()
  ;
