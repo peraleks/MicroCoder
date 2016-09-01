@@ -1,14 +1,14 @@
 <?php
 $Router
 ->notSafe()
+->namePrefix()
+->group('/comment')
 
-->group('55555555')
-
-	  ->route('/list/{id}', 'BlogController')
+	  ->route('/list/{id}/sdfslkjsdfasl/asdf/asdf', 'BlogController')->name('ro5')
 	   ->post('post')
 	    ->get('post')
 
-	  ->route('/list/articles', 'BlogController')
+	  ->route('/list/articles', 'BlogController')->overflow()
 	   ->post('post')
 	    ->get('action')
     

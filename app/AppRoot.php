@@ -8,6 +8,7 @@ class AppRoot extends Root
 	public function __construct () {
 		parent::__construct();
 		$this->router->init([__DIR__.'/routes.php'], 'notSafe');
+		$this->request->match($this->router);
 		// \d::p($this->router);
 	}
 }

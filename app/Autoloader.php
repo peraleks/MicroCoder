@@ -62,7 +62,7 @@ class Autoloader
         $this->spaceMap['lastName'] = $name;
         $this->arrayExists($name);
         if (is_array($path)) {
-            foreach ($path as  $value) {
+            foreach ($path as $value) {
                 $this->spaceMap[$name]['path'][] .= $value;
             }
         } else {
@@ -133,11 +133,13 @@ class Autoloader
      */
     private function arrayExists($name)
     {
-        array_key_exists($name, $this->lastMap) ?:
-            $this->lastMap[$name] = [];
+        array_key_exists($name, $this->lastMap)
+        ?:
+        $this->lastMap[$name] = [];
 
-        array_key_exists('path', $this->lastMap[$name]) ?:
-            $this->lastMap[$name]['path'] = [];
+        array_key_exists('path', $this->lastMap[$name])
+        ?:
+        $this->lastMap[$name]['path'] = [];
     } 
 
     /**
@@ -184,12 +186,11 @@ class Autoloader
             $path = $this->baseDir.$map[$this->space]['path'][$i].'/'.$class.'.php';
             if (($i == $count) && array_key_exists('strict', $map[$this->space])) {
                 include $path;
-
                 return;
-            } else {
+            }
+            else {
                 if (file_exists($path)) {
                     include $path;
-
                     return;
                 }
             }
