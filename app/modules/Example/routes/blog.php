@@ -8,7 +8,6 @@ $Router
 	   ->post('post')
 	    ->get('post')
 
-->includeFile(__DIR__.'/ro5.php')
 
 	  ->route('/list/{?id}', 'Blog')->regex(['id' => '[asd]'])
 	   ->post('post')
