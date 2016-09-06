@@ -1,7 +1,6 @@
 <?php
-define('MICRO_START', microtime(true));
 (function(){
-	
+
 require __DIR__.'/../vendor/zdorovo/micro/Micro/Debug/Error/ErrorHandler.php';
 MicroMir\Debug\Error\ErrorHandler::instance();
 

@@ -1,57 +1,65 @@
 <?php
 $Router
 ->notSafe()
-->namePrefix('dkkkjddf_')
+      ->namePrefix('example_')
+->controllerSpace('MicroModule\Zdorovo\Example\Controllers')
 
-->route('/привет', 'dkdkdk')->get('alalala')
+->group('/example')
+
+				->controller('ShopController')
+
+	->route('/привет')					->name('hello')
+	  ->get('show')
+
+	->route('/12345/{name}')			->name('12345')
+	 ->post('delete')
+	  ->get('show')
+
+	->route('/')						->name('main')
+	 ->post('put')
+	  ->get('show')
 
 
-->group('/blog1')->controller('66666666666')
+			->End_controller('ShopController')
 
-		->route('/234/{name}')->name('asdfa')
-				->post('sdfasf')
-				->get('action')
+->End_group('/example')
+	->group('/cms')
 
-->group('/shop')
+	->route('/{?id}/{id1}/{id2}/{id3}', 'CmsController')		->name('adfa')
+	 ->post('add', 'GoController')
+	  ->get('action')
+	->regex([
+				'id'  => '\d',
+				'id1' => '\d{3}',
+				'id2' => '\d',
+				'id3' => '\d',
+			])
+
+->End_group('/cms')
+	->group('/comment')
+
+							->controller('ByController')
+
+		->route('/list/{id}/sdfslkjsdfasl/asdf/asdf')				->name('ro5')
+		 ->post('post')
+		  ->get('post', 'BlogController')
+
+		->route('/list/articles', 'BlogController')->overflow()
+		 ->post('post')
+		  ->get('action')
+
+						->End_controller('ByController')
+    
+->End_group('/comment')
+	->group('/shop')
 
 		->includeFile(__DIR__.'/routes/blog.php')
 
-->groupEnd()
- 
-		->group()->controller('7777777777777777')
+->End_group('/shop')
 
-				->route('/{?id}/{id1}/{id2}/{id3}')->name('adfa')
-						->post('add', '4444444444')
-						->get('action')
-						->regex([
-									'id'  => '\d',
-									'id1' => '\d{3}',
-									'id2' => '\d',
-									'id3' => '\d',
-								])
-		->groupEnd()
 
-->groupEnd()
-
-		->route('/', 'BlogController')->name('Тридцатый')
-				->post('dell')
-				->get('action')
-
-		->route('/10', 'BlogController')->name('Тридцатый10')
-				->post('dell')
-				->get('action')
-
-				
-->group('/comment')
-
-	  ->route('/list/{id}/sdfslkjsdfasl/asdf/asdf', 'BlogController')->name('ro5')
-	   ->post('post')
-	    ->get('post')
-
-	  ->route('/list/articles', 'BlogController')->overflow()
-	   ->post('post')
-	    ->get('action')
-    
-->groupEnd()
+	->route('/10', 'Last')						->name('10')
+	 ->post('put', 'PUTController')
+	  ->get('show')
 
 ;

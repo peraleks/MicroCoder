@@ -10,6 +10,5 @@ class AppRoot extends Root
 		$this->router->init([__DIR__.'/routes.php'], 'notSafe');
 		$this->request->match($this->router);
 		// \d::p($this->router);
-		// \d::p($_SERVER);
 	}
 }
