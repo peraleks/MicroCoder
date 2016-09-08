@@ -2,7 +2,7 @@
 $Router
 ->notSafe()
       ->namePrefix('example_')
-->controllerSpace('MicroModule\Zdorovo\Example\Controllers')
+->controllerSpace('MicroModules\Example\Controllers')
 
 ->group('/example')
 

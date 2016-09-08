@@ -6,10 +6,10 @@ $GLOBALS['MICROCODER_GLOBAL_SETTINGS'] = [
 'DEVELOPMENT' 	 => true,
 'DEVELOPMENT_IP' => [
 					  '127.0.0.1' 	 => '',
-					  '192.168.56.1' => '',
+					  // '192.168.56.1' => '',
 					],
 
-'ERROR_LOG_FILE' => __DIR__.'/../../storage/logs/errors.log',
+'ERROR_LOG_FILE' => '/storage/logs/errors.log',
 
 
 

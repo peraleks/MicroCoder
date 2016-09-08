@@ -1,13 +1,15 @@
 <?php
 (function(){
+$microDir = dirname(__DIR__);
 
-require __DIR__.'/../vendor/zdorovo/micro/Micro/Debug/Error/ErrorHandler.php';
-MicroMir\Debug\Error\ErrorHandler::instance();
+require $microDir.'/vendor/zdorovo/micro/Micro/Debug/Error/ErrorHandler.php';
+$errorHandler = MicroMir\Debug\Error\ErrorHandler::instance();
+require $microDir.'/app/errorHandlerSettings.php';
 
-require __DIR__.'/../app/config/GLOBALS.php';
+require $microDir.'/app/config/GLOBAL.php';
 
 $mgs['WEB_DIR']  = __DIR__;
-$mgs['BASE_DIR'] = dirname($mgs['WEB_DIR']);
+$mgs['BASE_DIR'] = $microDir;
 
 
 require $mgs['BASE_DIR'].'/app/autoload.php';
