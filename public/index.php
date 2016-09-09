@@ -4,7 +4,7 @@ $microDir = dirname(__DIR__);
 
 require $microDir.'/vendor/zdorovo/micro/Micro/Debug/Error/ErrorHandler.php';
 $errorHandler = MicroMir\Debug\Error\ErrorHandler::instance();
-require $microDir.'/app/errorHandlerSettings.php';
+require $microDir.'/app/config/errorHandler.php';
 
 require $microDir.'/app/config/GLOBAL.php';
 

@@ -1,6 +1,6 @@
 <?php
 $Router
-->notSafe()
+// ->notSafe()
 
 
 ->group('/blog')
@@ -8,5 +8,6 @@ $Router
 ->End_group()
 
 
-// ->list('/microroutes')
+->list('/microroutes')
 ;
+// \d::p($this);
