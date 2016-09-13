@@ -18,12 +18,12 @@ $Router
 	    ->get('post')
 	  ->regex(['id' => '[asd]'])
 
-				->End_controller('BadController')
+				->End_controller()#BadController
 
-->End_group('/article')
+->End_group()#article
 
 	  ->route('/name', 'BlogController')->overflow('/list/{id}')
 	   ->post('post1')
 	    ->get('action')
 
- ;
+;#Router 

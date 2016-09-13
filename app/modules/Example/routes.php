@@ -1,7 +1,7 @@
 <?php
 $Router
-->notSafe()
-      ->namePrefix('example_')
+// ->notSafe()
+     ->namePrefix('example_')
 ->controllerSpace('MicroModules\Example\Controllers')
 
 ->group('/example')
@@ -20,14 +20,14 @@ $Router
 	  ->get('show')
 
 
-			->End_controller('ShopController')
+			->End_controller()#ShopController
 
-->End_group('/example')
+->End_group()#example
 	->group('/cms')
 
-	->route('/{?id}/{id1}/{id2}/{id3}', 'CmsController')		->name('adfa')
+	->route('/{?id}/{id1}/{id2}/{id3}', 'ShopController')		->name('adfa')
 	 ->post('add', 'GoController')
-	  ->get('action')
+	  ->get('show')
 	->regex([
 				'id'  => '\d',
 				'id1' => '\d{3}',
@@ -35,7 +35,7 @@ $Router
 				'id3' => '\d',
 			])
 
-->End_group('/cms')
+->End_group()#cms
 	->group('/comment')
 
 							->controller('ByController')
@@ -48,18 +48,20 @@ $Router
 		 ->post('post')
 		  ->get('action')
 
-						->End_controller('ByController')
+						->End_controller()#ByController
     
-->End_group('/comment')
+->End_group()#comment
 	->group('/shop')
 
 		->includeFile(__DIR__.'/routes/blog.php')
 
-->End_group('/shop')
+->End_group()#shop
 
 
 	->route('/10', 'Last')						->name('10')
 	 ->post('put', 'PUTController')
 	  ->get('show')
 
-;
+;#Router
+
+// \d::p($Router);

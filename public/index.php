@@ -1,4 +1,6 @@
 <?php
+define('MICRO_MEMORY', memory_get_usage());
+
 (function(){
 $microDir = dirname(__DIR__);
 
@@ -11,14 +13,9 @@ require $microDir.'/app/config/GLOBAL.php';
 $mgs['WEB_DIR']  = __DIR__;
 $mgs['BASE_DIR'] = $microDir;
 
-
 require $mgs['BASE_DIR'].'/app/autoload.php';
 
-// d::p($GLOBALS);
-
-d::m();
-
-new app\AppRoot;
+require $mgs['BASE_DIR'].'/app/root.php';
 
 d::m();
 
