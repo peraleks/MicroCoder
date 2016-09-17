@@ -1,10 +1,10 @@
 <?php
 $Router
 ->notSafe()
-	 ->namePrefix()
 ->controllerSpace('MicroModules\Zdorovo\Example\Controllers')
+	  ->nameSpace('333333')
 
-->group('/article')
+->node('/article')
 
 					->controller('BadController')
 
@@ -20,10 +20,11 @@ $Router
 
 				->End_controller()#BadController
 
-->End_group()#article
+->End_node()#article
 
 	  ->route('/name', 'BlogController')->overflow('/list/{id}')
 	   ->post('post1')
 	    ->get('action')
 
+	  ->End_nameSpace()#333333
 ;#Router 

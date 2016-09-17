@@ -1,10 +1,10 @@
 <?php
 $Router
-// ->notSafe()
-     ->namePrefix('example_')
+->notSafe()
 ->controllerSpace('MicroModules\Example\Controllers')
+->nameSpace('888888')    
 
-->group('/example')
+->node('/example')
 
 				->controller('ShopController')
 
@@ -22,8 +22,8 @@ $Router
 
 			->End_controller()#ShopController
 
-->End_group()#example
-	->group('/cms')
+->End_node()#example
+	->node('/cms')
 
 	->route('/{?id}/{id1}/{id2}/{id3}', 'ShopController')		->name('adfa')
 	 ->post('add', 'GoController')
@@ -35,8 +35,8 @@ $Router
 				'id3' => '\d',
 			])
 
-->End_group()#cms
-	->group('/comment')
+->End_node()#cms
+	->node('/comment')
 
 							->controller('ByController')
 
@@ -50,18 +50,20 @@ $Router
 
 						->End_controller()#ByController
     
-->End_group()#comment
-	->group('/shop')
+->End_node()#comment
+->End_nameSpace()
+	->node('/shop')
 
 		->includeFile(__DIR__.'/routes/blog.php')
 
-->End_group()#shop
-
-
+->End_node()#shop
+      
+->nameSpace('222222')
 	->route('/10', 'Last')						->name('10')
 	 ->post('put', 'PUTController')
 	  ->get('show')
 
-;#Router
+->End_nameSpace()
+;# Router -----------------------------------------------------------------------------
 
 // \d::p($Router);

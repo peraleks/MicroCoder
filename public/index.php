@@ -2,21 +2,24 @@
 define('MICRO_MEMORY', memory_get_usage());
 
 (function(){
-$microDir = dirname(__DIR__);
+define('MICRO_DIR', dirname(__DIR__));
+define('WEB_DIR', __DIR__);
 
-require $microDir.'/vendor/zdorovo/micro/Micro/Debug/Error/ErrorHandler.php';
+require MICRO_DIR.'/vendor/zdorovo/micro/Micro/Debug/Error/ErrorHandler.php';
 $errorHandler = MicroMir\Debug\Error\ErrorHandler::instance();
-require $microDir.'/app/config/errorHandler.php';
+require MICRO_DIR.'/app/config/errorHandler.php';
 
-require $microDir.'/app/config/GLOBAL.php';
+require MICRO_DIR.'/app/autoload.php';
 
-$mgs['WEB_DIR']  = __DIR__;
-$mgs['BASE_DIR'] = $microDir;
+require MICRO_DIR.'/app/config/main.php';
 
-require $mgs['BASE_DIR'].'/app/autoload.php';
+require MICRO_DIR.'/app/root.php';
 
-require $mgs['BASE_DIR'].'/app/root.php';
+\d::m();
+// \d::p($GLOBALS);
 
-d::m();
+// echo '<pre>';
+// print_r($GLOBALS);
+// echo '</pre>';
 
 })();

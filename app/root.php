@@ -2,7 +2,8 @@
 use MicroMir\{
 				Root\Root,
 				Routing\Router,
-				Routing\RouterController
+				Routing\RouterController,
+				Routing\RouterHelper
 
 };
 use MicroServices\{
@@ -10,18 +11,29 @@ use MicroServices\{
 
 
 };
-($R = Root::instance()) /*----------Корневой-реестр--------------------------*/
-						
-->link('Router', Router::instance())
-->link('Server', function(){ return new ServerService; })
+
+($R = Root::instance()) #------------- Корневой реестр ----------------------------
+
+
+->link('Router', 			Router::instance())
+->link('RouterController', 	new RouterController($R))
+->link('RouterHelper',		function($R){ return  new RouterHelper($R); })
+
+->link('Server',			function(){ return new ServerService; })
 
 
 
 
-;/*($R = Root::instance()) -------------------------------------------------*/
+;#.................................................................................
 
 							# Главный контроллер #
 
-							 	  		$R->Router->init([$microDir.'/app/routes.php'], 'notSafe');
-(new RouterController($R, $mgs))->match($R->Router);
 
+
+
+
+$R->Router->init([MICRO_DIR.'/app/routes.php'], 'notSafe');
+
+$R->RouterController->match();
+
+// \d::p($R);

@@ -3,7 +3,7 @@ $errorHandler
 
 ->headerMessage
 ([
-	'dir' 	 => $microDir.'/app/modules',
+	'dir' 	 => MICRO_DIR.'/app/modules',
 	'space'	 => 'MicroModule',
 	'header' => '500 Internal Server Error',
 	'ru' 	 =>	'Ошибка на странице',
@@ -11,4 +11,4 @@ $errorHandler
 ])
 
 
-;// $errorHandler
+;# $errorHandler .................................................
