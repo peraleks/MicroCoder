@@ -22,9 +22,10 @@ use MicroServices\{
 ->link('Server',			function(){ return new ServerService; })
 
 
-
+->func('nameToUrl', 'RouterHelper', 'getUrl')
 
 ;#.................................................................................
+$errorHandler->setRoot($R);#.......................................................
 
 							# Главный контроллер #
 

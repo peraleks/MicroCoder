@@ -1,6 +1,7 @@
 <?php
 $Router
 ->notSafe()
+->controllerSpace('MicroModules\Example\Controllers')
 ->nameSpace('111111')
 
 
@@ -8,7 +9,7 @@ $Router
 ->nameSpace('222222')
 	->node('/blog')
 
-->route('/', 'MicroModules')->get('action')					->name('micro')
+->route('/', 'ShopController')->get('show')					->name('micro')
   	 						->put('putAction')
   	 					 ->delete('deleteAction')
 

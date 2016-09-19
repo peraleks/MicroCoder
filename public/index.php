@@ -18,8 +18,4 @@ require MICRO_DIR.'/app/root.php';
 \d::m();
 // \d::p($GLOBALS);
 
-// echo '<pre>';
-// print_r($GLOBALS);
-// echo '</pre>';
-
 })();
