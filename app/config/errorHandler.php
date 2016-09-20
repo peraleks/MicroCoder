@@ -1,7 +1,7 @@
 <?php
 $errorHandler
 
-->headerMessage
+->setHeaderMessage
 ([
 	'dir' 	 => MICRO_DIR.'/app/modules',
 	'space'	 => 'MicroModule',
@@ -9,6 +9,5 @@ $errorHandler
 	'ru' 	 =>	'Ошибка на странице',
 	'en' 	 => 'Page Error',
 ])
-
 
 ;# $errorHandler .................................................
