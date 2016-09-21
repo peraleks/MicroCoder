@@ -7,7 +7,7 @@ define('WEB_DIR', __DIR__);
 
 require MICRO_DIR.'/vendor/zdorovo/micro/Micro/Debug/Error/ErrorHandler.php';
 $errorHandler = MicroMir\Debug\Error\ErrorHandler::instance();
-require MICRO_DIR.'/app/config/errorHandler.php';
+require MICRO_DIR.'/app/config/error.php';
 
 require MICRO_DIR.'/app/autoload.php';
 

@@ -14,7 +14,6 @@ use MicroServices\{
 
 ($R = Root::instance()) #------------- Корневой реестр ----------------------------
 
-
 ->link('Router', 			Router::instance())
 ->link('RouterController', 	new RouterController($R))
 ->link('RouterHelper',		function($R){ return  new RouterHelper($R); })

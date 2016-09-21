@@ -6,6 +6,7 @@ class ShopController
 {
 
 	public function show($R, $PS) {
+		// $var[];
 		// ob_start();
 		// echo $R->RouterHelpe->getUr().'<br>';
 		// echo $PS['id4'].'<br>';
@@ -15,7 +16,7 @@ class ShopController
 
 
 		\d::p($R->RouterHelper->getUrl('222222/888888/ro5'));
-		$R::nameToUr('222222/888888/ro5');
+		\d::p($R::nameToUrl('222222/888888/ro5'));
 
 		// $cook = ob_get_contents();
 		// 		ob_end_clean();

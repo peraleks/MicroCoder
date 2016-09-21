@@ -11,9 +11,6 @@ $Allow_Development_IP = true;
 						];
 
 
-define('MICRO_ERROR_LOG_FILE', '/storage/logs/errors.log');
-
-
 
 	
 if ($Allow_Development_IP && array_key_exists($_SERVER['REMOTE_ADDR'], $Development_IP))
