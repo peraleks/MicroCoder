@@ -10,7 +10,7 @@ class ServerService
 		$this->server = $_SERVER;
 	}
 
-	public function printServer() {
+	public function printServer($a) {
 		\d::p($this->server);
 	}
 }

@@ -6,6 +6,8 @@ class ShopController
 {
 
 	public function show($R, $PS) {
+		 // \d::p(stream_get_wrappers());
+		 // \d::p($_SERVER);
 		// $var[];
 		// ob_start();
 		// echo $R->RouterHelpe->getUr().'<br>';
@@ -15,8 +17,9 @@ class ShopController
 		echo $PS['id3'].'<br>';
 
 
-		\d::p($R->RouterHelper->getUrl('222222/888888/ro5'));
-		\d::p($R::nameToUrl('222222/888888/ro5'));
+		\d::p($R->RouterHelper->Router->matchUrl('222222/888888/ro5', 'GET'));
+		\d::p($R::nameToUrl('222222/888888/ro5'))
+		// $R->Server->printServer();
 
 		// $cook = ob_get_contents();
 		// 		ob_end_clean();

@@ -12,8 +12,7 @@ $errorHandler #----------------------------------------------------------------
 
 ->setHeaderMessage
 ([
-	'dir' 	 => MICRO_DIR.'/app/modules',
-	'space'	 => 'MicroModules',
+	'marker' 	 => 1,
 	'header' => '500 Internal Server Error',
 	'ru' 	 =>	'Ошибка на странице',
 	'en' 	 => 'Page Error',
