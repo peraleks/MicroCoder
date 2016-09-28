@@ -5,14 +5,15 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Alexei Perevoshchikov",
-            "email": "zdorovoveselo@gmail.com"
+            "name":"Alexei Perevoshchikov",
+            "email":"zdorovoveselo@gmail.com"
         }
     ],
 
     "require": {
         "php":">=7",
-        "zdorovo/micro":"dev-master"
+        "zdorovo/micro":"dev-master",
+        "zendframework/zend-diactoros":"dev-master"
     },
 
     "repositories":[
@@ -24,11 +25,17 @@
 
         "autoload": {
         "psr-4": {
-            "app\\": "app/"
+            "app\\": "app/",
+            "MicroModules\\": "app/modules/"
         }
     },
 
+    "config": {
+        "preferred-install": "dist"
+    },
+
+    "prefer-stable": true,
+    "minimum-stability": "dev"
     
-    "minimum-stability":"dev"
 
 }

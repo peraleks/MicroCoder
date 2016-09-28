@@ -18,7 +18,7 @@ class ShopController
 
 
 		\d::p($R->RouterHelper->Router->matchUrl('222222/888888/ro5', 'GET'));
-		\d::p($R::nameToUrl('222222/888888/ro5'))
+		\d::p($R::nameToUrl('222222/888888/ro5'));
 		// $R->Server->printServer();
 
 		// $cook = ob_get_contents();
