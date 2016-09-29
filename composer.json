@@ -25,7 +25,6 @@
 
     "autoload": {
         "psr-4": {
-            "app\\": "app/",
             "MicroModules\\": "app/modules/",
             "": "vendor/zdorovo/micro/Micro/Debug/"
         }

@@ -11,6 +11,9 @@ use MicroServices\{
 
 
 };
+use Zend\Diactoros\{
+				ServerRequest
+};
 
 ($R = Root::instance()) #------------- Корневой реестр ----------------------------
 
@@ -19,6 +22,8 @@ use MicroServices\{
 ->link('RouterHelper',		function($R){ return  new RouterHelper($R); })
 
 ->link('Server',			function(){ return new ServerService; })
+
+->link('ServerRequest',		function(){ return new ServerRequest($_SERVER, $_FILES); })
 
 
 ->func('nameToUrl', 'RouterHelper', 'getUrl')
