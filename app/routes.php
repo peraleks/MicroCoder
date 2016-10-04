@@ -9,7 +9,7 @@ $Router
 ->nameSpace('222222')
 	->node('/blog')
 
-->route('/', 'ShopController')->get('show')/*->before('auth', 'web')*/					->name('micro')
+->route('/', 'ShopController')->get('show') 		->name('micro')
   	 						->put('putAction')
   	 					 ->delete('deleteAction')
 

@@ -2,8 +2,15 @@
 use MicroMir\{
 				Root\Root,
 				Root\RootController,
-				Routing\Router,
-				Routing\RouterHelper
+				Routing\RouterHost,
+				Routing\RouterHelper,
+				Routing\Route
+
+};
+use MicroMir\Stage\{
+				StageController,
+				FillRoute,
+				ExecuteRoute
 
 };
 use MicroServices\{
@@ -12,33 +19,37 @@ use MicroServices\{
 
 };
 use Zend\Diactoros\{
-				ServerRequest
+				ServerRequest,
+				ServerRequestFactory
 };
 
 ($R = Root::instance()) #------------- Корневой реестр ----------------------------
 
-->link('Router', 			Router::instance())
-->link('RootController', 	new RootController($R))
-->link('RouterHelper',		function($R){ return  new RouterHelper($R); })
+->link('StageController', new StageController($R))
+->link('Request'		, function(){ return ServerRequestFactory::fromGlobals(); })
+->link('RouterHost'		, function(){ return RouterHost::instance(); })
+->link('Route'			, function(){ return new Route; })
+->link('RouterHelper'	, function($R){ return new RouterHelper($R); })
 
-->link('Server',			function(){ return new ServerService; })
 
-->link('ServerRequest',		function(){ return new ServerRequest($_SERVER, $_FILES); })
+->link('s_FillRoute'	, function($R){ return new FillRoute($R); })
+->link('s_ExecuteRoute'	, function($R){ return new ExecuteRoute($R); })
 
 
 ->func('nameToUrl', 'RouterHelper', 'getUrl')
 
-;#.................................................................................
-// $errorHandler->setRoot($R);#.......................................................
-
-							# Главный контроллер #
+;#.............................................................................
+// $errorHandler->setRoot($R);#................................................
 
 
+$R->StageController #----------------------------------------------------------
+
+->add('s_FillRoute')
+->add('s_ExecuteRoute')
+
+
+->run();# StageController .....................................................
 
 
 
-$R->Router->init([MICRO_DIR.'/app/routes.php'], 'notSafe');
-
-$R->RootController->matchUrl();
-
-// \d::p($R);
+// \d::p($_SERVER);

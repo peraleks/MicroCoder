@@ -3,10 +3,7 @@
 
 require MICRO_DIR.'/vendor/zdorovo/micro/Micro/Autoload/Autoloader.php';
 
-$loader = new Autoloader(MICRO_DIR);
-$loader
- #--------------------------------------------------
-// (new Autoloader(MICRO_DIR)) #--------------------------------------------------
+(new Autoloader(MICRO_DIR)) #--------------------------------------------------
 
 	->space( 'MicroMir'     		, '/vendor/zdorovo/micro/Micro')
 	->space( 'MicroModules\Example' , '/app/modules/Example')
