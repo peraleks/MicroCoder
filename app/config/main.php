@@ -2,7 +2,6 @@
 
 define('MICRO_LOCALE', 'ru');
 
-
 $Allow_Development_IP = true;
 
 	  $Development_IP =	[

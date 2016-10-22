@@ -23,7 +23,7 @@ use Zend\Diactoros\{
 				ServerRequestFactory
 };
 
-($R = Root::instance()) #------------- Корневой реестр ----------------------------
+($R = Root::instance()) #------------- Корневой реестр ------------------------
 
 ->link('StageController', new StageController($R))
 ->link('Request'		, function(){ return ServerRequestFactory::fromGlobals(); })
@@ -35,12 +35,10 @@ use Zend\Diactoros\{
 ->link('s_FillRoute'	, function($R){ return new FillRoute($R); })
 ->link('s_ExecuteRoute'	, function($R){ return new ExecuteRoute($R); })
 
-
 ->func('nameToUrl', 'RouterHelper', 'getUrl')
 
-;#.............................................................................
-// $errorHandler->setRoot($R);#................................................
-
+;# Root .......................................................................
+$errorHandler->setRoot($R); # зависимость для обнаружения инверсии func() .....
 
 $R->StageController #----------------------------------------------------------
 

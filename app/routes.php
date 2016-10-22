@@ -9,9 +9,20 @@ $Router
 ->nameSpace('222222')
 	->node('/blog')
 
-->route('/', 'ShopController')->get('show') 		->name('micro')
+->route('/', 'ShopController')								->name('micro')
+							->get('show') 		
   	 						->put('putAction')
   	 					 ->delete('deleteAction')
+
+->node('/cms2')
+
+->route('/{?id}', 'ShopController')		->name('adfa')
+  ->get('show')
+->regex([
+			'id'  => '\d',
+		])
+
+->End_node()#cms
 
 		->includeFile(__DIR__.'/modules/Example/routes.php')
 

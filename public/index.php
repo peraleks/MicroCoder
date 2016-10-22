@@ -11,10 +11,12 @@ require MICRO_DIR.'/app/config/error.php';
 
 require MICRO_DIR.'/app/config/main.php';
 
+	// режим обслуживания maintenance mode
+// require MICRO_DIR.'/app/maintenance.php';
+
 require MICRO_DIR.'/app/autoload.php';
 
 require MICRO_DIR.'/app/root.php';
 
 d::m();
-
 })();
