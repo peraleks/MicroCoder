@@ -11,7 +11,7 @@ require MICRO_DIR.'/app/config/error.php';
 
 require MICRO_DIR.'/app/config/main.php';
 
-	// режим обслуживания maintenance mode
+	// режим обслуживания | maintenance mode
 // require MICRO_DIR.'/app/maintenance.php';
 
 require MICRO_DIR.'/app/autoload.php';
