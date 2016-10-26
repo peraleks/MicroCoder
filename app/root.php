@@ -50,10 +50,10 @@ $errorHandler->setRoot($R); # зависимость для обнаружени
 
 $R->StageController #----------------------------------------------------------
 
-->add('s_FillRoute')
-->add('s_ExecuteRoute')
+->stage('s_FillRoute')
+->stage('s_ExecuteRoute')
 
-// ->afterEech()
+// ->afterResponse('s_ExecuteRoute')
 ->run();# StageController .....................................................
 
 
