@@ -30,6 +30,8 @@ $Router
 
 	->End_node()#blog
 ->End_nameSpace()
+
+// ->page404('/404.html')
 	
 ->list('/microroutes')
 

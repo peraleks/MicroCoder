@@ -9,14 +9,16 @@ use MicroMir\{
 use MicroMir\Providers\{
 				ResponseFactory
 };
-use MicroMir\Stage\{
+use MicroMir\Stages\{
 				StageController,
 				FillRoute,
-				ExecuteRoute
+				NotFound404,
+				RouteStages,
+				FollowRoute
 
 };
 use MicroServices\{
-				ServerService
+				LogStage
 
 
 };
@@ -41,21 +43,22 @@ use Zend\Diactoros\{
 ->func('nameToUrl', 'RouterHelper', 'getUrl')
 
 
-->link('s_FillRoute'	, function($R){ return new FillRoute($R); })
-->link('s_ExecuteRoute'	, function($R){ return new ExecuteRoute($R); })
-
 
 ;# Root .......................................................................
 $errorHandler->setRoot($R); # зависимость для обнаружения инверсии func() .....
 
 $R->StageController #----------------------------------------------------------
 
-->stage('s_FillRoute')
-->stage('s_ExecuteRoute')
+->stages([
+		   FillRoute::class,
+		   NotFound404::class,
+		   RouteStages::class,
+		   FollowRoute::class,
+		 ])
 
-// ->afterResponse('s_ExecuteRoute')
-->run();# StageController .....................................................
 
+->afterResponse([
+				  LogStage::class,
+				])
 
-
-// \d::p($_SERVER);
+->nextStage();# StageController ...............................................
