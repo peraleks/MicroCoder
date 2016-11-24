@@ -19,5 +19,6 @@ require MICRO_DIR.'/app/autoload.php';
 require MICRO_DIR.'/app/root.php';
 
 d::m();
-d::p($_SERVER);
+// d::p($_SERVER);
+// d::p($R->RouterHost);
 })();

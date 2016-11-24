@@ -1,26 +1,28 @@
 <?php
-use MicroMir\{
-				Root\Root,
-				Routing\RouterHost,
-				Routing\RouterHelper,
-				Routing\Route
-
+use MicroMir\Root\{
+				Root
+};
+use MicroMir\Routing\{
+				RouterHost,
+				RouterHelper,
+				Route
+};
+use MicroMir\Http\{
+				Verbs
 };
 use MicroMir\Providers\{
 				ResponseFactory
 };
 use MicroMir\Stages\{
 				StageController,
+				MethodNotImplemented501,
 				FillRoute,
 				NotFound404,
 				RouteStages,
 				FollowRoute
-
 };
 use MicroServices\{
 				LogStage
-
-
 };
 use Zend\Diactoros\{
 				ServerRequest,
@@ -31,13 +33,14 @@ use Zend\Diactoros\{
 
 ($R = Root::instance()) #------------- Корневой реестр ------------------------
 
-->link('StageController', function($R){ return new StageController($R); })
-->link('Request'		, function(){ return ServerRequestFactory::fromGlobals(); })
-->link('Emitter'		, function(){ return new SapiEmitter; })
-->link('ResponseFactory', function(){ return new ResponseFactory; })
-->link('RouterHost'		, function(){ return RouterHost::instance(); })
-->link('Route'			, function(){ return new Route; })
-->link('RouterHelper'	, function($R){ return new RouterHelper($R); })
+->link('Emitter'		, function()  { return new SapiEmitter; 						})
+->link('Request'		, function()  { return 	   ServerRequestFactory::fromGlobals(); })
+->link('ResponseFactory', function()  { return new ResponseFactory; 					})
+->link('Route'			, function()  { return new Route; 								})
+->link('RouterHelper'	, function($R){ return new RouterHelper($R); 					})
+->link('RouterHost'		, function($R){ return new RouterHost($R); 						})
+->link('StageController', function($R){ return new StageController($R); 				})
+->link('Verbs'			, function()  { return new Verbs; 								})
 
 
 ->func('nameToUrl', 'RouterHelper', 'getUrl')
@@ -50,6 +53,7 @@ $errorHandler->setRoot($R); # зависимость для обнаружени
 $R->StageController #----------------------------------------------------------
 
 ->stages([
+		   MethodNotImplemented501::class,
 		   FillRoute::class,
 		   NotFound404::class,
 		   RouteStages::class,

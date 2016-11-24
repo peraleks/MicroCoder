@@ -9,15 +9,15 @@ $Router
 				->controller('ShopController')
 
 	->route('/привет')					->name('hello')
-	  ->get('show')
+	  ->GET('show')
 
 	->route('/12345/{name}')			->name('12345')
-	 ->post('delete')
-	  ->get('show')
+	 ->POST('delete')
+	  ->GET('show')
 
 	->route('/')						->name('main')
-	 ->post('put')
-	  ->get('show')
+	 ->POST('put')
+	  ->GET('show')
 
 
 			->End_controller()#ShopController
@@ -26,8 +26,9 @@ $Router
 	->node('/cms')
 
 	->route('/{?id}/{id1}/{id2}/{id3}', 'ShopController')		->name('adfa')
-	 ->post('add', 'GoController')
-	  ->get('show')
+	 ->POST('add', 'GoController')
+	  ->GET('show')
+	  ->PUT('show')
 	->regex([
 				'id'  => '\d',
 				'id1' => '\d{3}',
@@ -41,12 +42,12 @@ $Router
 							->controller('ByController')
 
 		->route('/list/{id}/sdfslkjsdfasl/asdf/asdf')				->name('ro5')
-		 ->post('post')
-		  ->get('post', 'BlogController')
+		 ->POST('post')
+		  ->GET('post', 'BlogController')
 
 		->route('/list/articles', 'BlogController')->overflow()
-		 ->post('post')
-		  ->get('action')
+		 ->POST('post')
+		  ->GET('action')
 
 						->End_controller()#ByController
     
@@ -60,8 +61,8 @@ $Router
       
 ->nameSpace('222222')
 	->route('/10', 'Last')						->name('10')
-	 ->post('put', 'PUTController')
-	  ->get('show')
+	 ->POST('put', 'PUTController')
+	  ->GET('show')
 
 ->End_nameSpace()
 ;# Router -----------------------------------------------------------------------------

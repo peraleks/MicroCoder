@@ -9,13 +9,13 @@ $Router
 					->controller('BadController')
 
 	  ->route('/list2/{id}')					->name('list2')
-	   ->post('post')
-	    ->get('post')
+	   ->POST('post')
+	    ->GET('post')
 
 
 	  ->route('/list/{?id}', 'Blog')			->name('list')
-	   ->post('post')
-	    ->get('post')
+	   ->POST('post')
+	    ->GET('post')
 	  ->regex(['id' => '[asd]'])
 
 				->End_controller()#BadController
@@ -23,8 +23,8 @@ $Router
 ->End_node()#article
 
 	  ->route('/name', 'BlogController')->overflow('/list/{id}')
-	   ->post('post1')
-	    ->get('action')
+	   ->POST('post1')
+	    ->GET('action')
 
 	  ->End_nameSpace()#333333
 ;#Router 

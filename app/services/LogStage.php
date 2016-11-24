@@ -10,6 +10,6 @@ class LogStage
 
 	public function executeStage()
 	{
-		echo 'LogStage';
+		// echo 'LogStage';
 	}
 }

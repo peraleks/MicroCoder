@@ -1,19 +1,19 @@
 <?php
+/*  !#$%&\'*+.^_`\|~0-9A-Z-  */
+
 $RouterHost
 
-->router('micro')						
+->router('micro')
 	->host('*')
-	   ->list([MICRO_DIR.'/app/routes.php']/*, 'notSafe'*/)
+	   ->list([MICRO_DIR.'/app/routes.php'], 'notSafe')
 
-->router('blog')						
+->router('blog')
 	->host('laravel.loc')
 	   ->list([MICRO_DIR.'/app/routes.php'], 'notSafe')
 
-->router('shop')						
+->router('shop')
 	->host('yii.loc')
 	   ->list([MICRO_DIR.'/app/routes.php'], 'notSafe')
 
 
 ;
-
-// \d::p($this);

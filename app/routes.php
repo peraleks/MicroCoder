@@ -10,14 +10,15 @@ $Router
 	->node('/blog')
 
 ->route('/', 'ShopController')								->name('micro')
-							->get('show') 		
-  	 						->put('putAction')
-  	 					 ->delete('deleteAction')
+							->GET('show') 		
+  	 						->PUT('putAction')
+  	 					 ->DELETE('deleteAction')
 
 ->node('/cms2')
 
 ->route('/{?id}', 'ShopController')		->name('adfa')
-  ->get('show')
+  ->GET('show')
+  ->PUT('showput')
 ->regex([
 			'id'  => '\d',
 		])
@@ -33,8 +34,7 @@ $Router
 
 // ->page404('/404.html')
 	
+
+
 ->list('/microroutes')
-
-
 ;# $Router ....................................................................
-// \d::p($this);

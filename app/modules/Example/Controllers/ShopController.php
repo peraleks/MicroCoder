@@ -3,6 +3,7 @@ namespace MicroModules\Example\Controllers;
 
 class ShopController
 {
+
 	function __construct() {
 	}
 

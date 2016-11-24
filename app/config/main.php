@@ -15,3 +15,7 @@ $Allow_Development_IP = true;
 if ($Allow_Development_IP && array_key_exists($_SERVER['REMOTE_ADDR'], $Development_IP))
 	 { define('MICRO_DEVELOPMENT', true);  } 
 else { define('MICRO_DEVELOPMENT', false); }
+
+
+define('MICRO_HOSTS_SETTINGS', MICRO_DIR.'/app/config/hosts.php');
+define('MICRO_VERBS_SETTINGS', MICRO_DIR.'/app/config/verbs.php');
