@@ -22,7 +22,7 @@ $Router
 
 			->End_controller()#ShopController
 
-->End_node()#example
+->nodeEnd()#example
 	->node('/cms')
 
 	->route('/{?id}/{id1}/{id2}/{id3}', 'ShopController')		->name('adfa')
@@ -36,7 +36,7 @@ $Router
 				'id3' => '\d',
 			])
 
-->End_node()#cms
+->nodeEnd()#cms
 	->node('/comment')
 
 							->controller('ByController')
@@ -51,13 +51,13 @@ $Router
 
 						->End_controller()#ByController
     
-->End_node()#comment
+->nodeEnd()#comment
 ->End_nameSpace()
 	->node('/shop')
 
 		->includeFile(__DIR__.'/routes/blog.php')
 
-->End_node()#shop
+->nodeEnd()#shop
       
 ->nameSpace('222222')
 	->route('/10', 'Last')						->name('10')

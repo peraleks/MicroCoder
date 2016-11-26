@@ -9,27 +9,27 @@ $Router
 ->nameSpace('222222')
 	->node('/blog')
 
-->route('/', 'ShopController')								->name('micro')
-							->GET('show') 		
-  	 						->PUT('putAction')
-  	 					 ->DELETE('deleteAction')
+->route('/', 'ShopController')->GET('show')					->name('micro')
+			  				  ->PUT('putAction')
+						      ->DELETE('deleteAction')
+	 		
 
 ->node('/cms2')
 
-->route('/{?id}', 'ShopController')		->name('adfa')
+->route('/{?id}', 'ShopController')		                     ->name('adfa')
   ->GET('show')
   ->PUT('showput')
 ->regex([
 			'id'  => '\d',
 		])
 
-->End_node()#cms
+->nodeEnd()#cms
 
 		->includeFile(__DIR__.'/modules/Example/routes.php')
 
 
 
-	->End_node()#blog
+	->nodeEnd()#blog
 ->End_nameSpace()
 
 // ->page404('/404.html')
@@ -38,3 +38,4 @@ $Router
 
 ->list('/microroutes')
 ;# $Router ....................................................................
+// \d::p($this);

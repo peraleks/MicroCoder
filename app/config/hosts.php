@@ -5,7 +5,7 @@ $RouterHost
 
 ->router('micro')
 	->host('*')
-	   ->list([MICRO_DIR.'/app/routes.php'], 'notSafe')
+	   ->list([MICRO_DIR.'/app/routes.php']/*, 'notSafe'*/)
 
 ->router('blog')
 	->host('laravel.loc')

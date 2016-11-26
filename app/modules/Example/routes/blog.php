@@ -20,7 +20,7 @@ $Router
 
 				->End_controller()#BadController
 
-->End_node()#article
+->nodeEnd()#article
 
 	  ->route('/name', 'BlogController')->overflow('/list/{id}')
 	   ->POST('post1')

@@ -1,6 +1,6 @@
 <?php
 define('MICRO_MEMORY', memory_get_usage());
-
+// ob_start();
 (function(){
 define('MICRO_DIR', dirname(__DIR__));
 define('WEB_DIR', __DIR__);
