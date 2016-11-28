@@ -19,7 +19,7 @@ use MicroMir\Stages\{
 				FillRoute,
 				NotFound404,
 				RouteStages,
-				FollowRoute
+				FollowRoute200
 };
 use MicroServices\{
 				LogStage
@@ -35,6 +35,7 @@ use Zend\Diactoros\{
 
 ->link('Emitter'		, function()  { return new SapiEmitter; 						})
 ->link('Request'		, function()  { return 	   ServerRequestFactory::fromGlobals(); })
+//->link('Response'		, function()  { return new Response;                            })
 ->link('ResponseFactory', function()  { return new ResponseFactory; 					})
 ->link('Route'			, function()  { return new Route; 								})
 ->link('RouterHelper'	, function($R){ return new RouterHelper($R); 					})
@@ -53,12 +54,12 @@ $errorHandler->setRoot($R); # зависимость для обнаружени
 $R->StageController #----------------------------------------------------------
 
 ->stages([
-		   MethodNotImplemented501::class,
-		   FillRoute::class,
-		   NotFound404::class,
-		   RouteStages::class,
-		   FollowRoute::class,
-		 ])
+    MethodNotImplemented501::class,
+    FillRoute::class,
+    RouteStages::class,
+    FollowRoute200::class,
+    NotFound404::class,
+])
 
 
 ->afterResponse([

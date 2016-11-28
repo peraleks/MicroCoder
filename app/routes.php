@@ -1,39 +1,15 @@
 <?php
 $Router
 ->notSafe()
-->controllerSpace('MicroModules\Example\Controllers')
-->nameSpace('111111')
 
 
-->End_nameSpace()
-->nameSpace('222222')
-	->node('/blog')
+->includeFile(__DIR__ . '/modules/Example/routes.php')
 
-->route('/', 'ShopController')->GET('show')					->name('micro')
-			  				  ->PUT('putAction')
-						      ->DELETE('deleteAction')
-	 		
+//->includeFile(__DIR__ . '/modules/Example/routes/blog.php')
 
-->node('/cms2')
+//->includeFile(__DIR__ . '/modules/Example/routes/shop.php')
 
-->route('/{?id}', 'ShopController')		                     ->name('adfa')
-  ->GET('show')
-  ->PUT('showput')
-->regex([
-			'id'  => '\d',
-		])
-
-->nodeEnd()#cms
-
-		->includeFile(__DIR__.'/modules/Example/routes.php')
-
-
-
-	->nodeEnd()#blog
-->End_nameSpace()
-
-// ->page404('/404.html')
-	
+ ->page404('/404.html')
 
 
 ->list('/microroutes')
