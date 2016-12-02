@@ -1,34 +1,41 @@
 <?php
 use MicroMir\Root\{
-				Root
+    Root
 };
+
 use MicroMir\Routing\{
-				RouterHost,
-				RouterHelper,
-				Route
+    RouterHost,
+    RouterHelper,
+    Route
 };
+
 use MicroMir\Http\{
-				Verbs
+    Verbs
 };
+
 use MicroMir\Providers\{
-				ResponseFactory
+    ResponseFactory
 };
+
 use MicroMir\Stages\{
-				StageController,
-				MethodNotImplemented501,
-				FillRoute,
-				NotFound404,
-				RouteStages,
-				FollowRoute200
+    StageController,
+    MethodNotImplemented501,
+    FillRoute,
+    RouteStages,
+    FollowRoute200,
+    NotFound404,
+    NotAllowed405
 };
+
 use MicroServices\{
-				LogStage
+    LogStage
 };
+
 use Zend\Diactoros\{
-				ServerRequest,
-				ServerRequestFactory,
-				Response,
-				Response\SapiEmitter
+    ServerRequest,
+    ServerRequestFactory,
+    Response,
+    Response\SapiEmitter
 };
 
 ($R = Root::instance()) #------------- Корневой реестр ------------------------
@@ -59,11 +66,11 @@ $R->StageController #----------------------------------------------------------
     RouteStages::class,
     FollowRoute200::class,
     NotFound404::class,
+    NotAllowed405::class,
 ])
 
-
 ->afterResponse([
-				  LogStage::class,
-				])
+    LogStage::class,
+])
 
 ->nextStage();# StageController ...............................................

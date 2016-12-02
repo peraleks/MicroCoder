@@ -2,10 +2,10 @@
 
 return
 
-[
-		'HEAD',
-		'GET',
-		'POST',
-		'PUT',
-		'DELETE',
-];
+    [
+        'HEAD',
+        'GET',
+        'POST',
+        'PUT',
+        'DELETE',
+    ];
