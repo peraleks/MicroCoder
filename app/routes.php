@@ -1,6 +1,6 @@
 <?php
 $Router
-//->notSafe()
+->notSafe()
 
 
 //->includeFile(__DIR__ . '/modules/Example/routes.php')
@@ -17,4 +17,4 @@ $Router
 
 ->list('/microroutes')
 ;# $Router ....................................................................
- \d::p($this);
+// \d::p($this);

@@ -8,14 +8,14 @@ class ShopController
     {
     }
 
-    public function show($R, $PS)
+    public function current($R, $PS)
     {
 //        ob_start();
-
-        echo $PS['id'] . '<br>';
-        echo $PS['id1'] . '<br>';
-        echo $PS['id2'] . '<br>';
-        echo $PS['id3'] . '<br>';
+        \d::p($R->Route);
+//        echo $PS['id'] . '<br>';
+//        echo $PS['id1'] . '<br>';
+//        echo $PS['id2'] . '<br>';
+//        echo $PS['id3'] . '<br>';
 //        echo ob_get_clean();
         // \d::p($R->RouterHelper->getUrl('222222/888888/ro5'));
         // \d::p($R::nameToUrl('ro5'));

@@ -5,20 +5,18 @@ require MICRO_DIR.'/vendor/zdorovo/micro/Micro/Autoload/Autoloader.php';
 
 (new Autoloader(MICRO_DIR)) #--------------------------------------------------
 
-	->space( 'MicroMir'     		, '/vendor/zdorovo/micro/Micro')
-	->space( 'MicroModules\Example' , '/app/modules/Example')
-	->space( 'MicroServices'		, '/app/services')
+	->psr4( 'MicroMir'     		   , '/vendor/zdorovo/micro/Micro')
+	->psr4( 'MicroModules\Example' , '/app/modules/Example')
+	->psr4( 'MicroServices'		   , '/app/services')
 
-	// ->space( '', '/vendor/zdorovo/micro/Micro/Debug')->next()
+    ->globalClass('/vendor/zdorovo/micro/Micro/Debug/d.php', ['d'])
 
-->globalClass('/vendor/zdorovo/micro/Micro/Debug/d.php', ['d'])
+//	 ->psr4( '', '/vendor/zdorovo/micro/Micro/Debug')->next()
 
 
-
-	->space( 'Psr\Http\Message'	, '/vendor/psr/http-message/src')
-	->space( 'Zend\Diactoros'	, '/vendor/zendframework/zend-diactoros/src')
+	->psr4( 'Psr\Http\Message'	, '/vendor/psr/http-message/src')
+	->psr4( 'Zend\Diactoros'	, '/vendor/zendframework/zend-diactoros/src')
 
 
 
 ;# Autoloader .................................................................
-// \d::p($loader);

@@ -1,6 +1,6 @@
 <?php
-$Router
-->controllerSpace('MicroModules\Zdorovo\Example\Controllers')
+$Router->notSafe()
+->controllerSpace('MicroModules\Example\Controllers')
 
     ->controller('UserHelpController')
     ->post('/user/confirm-phone'			   , 'confirmPhone'      )
@@ -10,7 +10,8 @@ $Router
 
     ->post('/user/reset-password', 'resetPassword', 'UserResourceController')
 
-    ->controller('UserAuthController')
+//    ->controller('UserAuthController')
+    ->controller('ShopController')
     ->post('/user/login'  , 'login'  )->name('userLogin')
     ->post('/user/logout' , 'logout' )
     ->get('/user/current' , 'current')
@@ -35,6 +36,7 @@ $Router
     ->get('/user/{id}/sports', 'get' , 'PreferenceActivityController')
     ->put('/user/{id}/sports', 'post', 'PreferenceActivityController')
 
-//    ->includeFile(__DIR__ . '/blog.php')
+
+    ->includeFile(__DIR__ . '/blog.php')
 
 ;
