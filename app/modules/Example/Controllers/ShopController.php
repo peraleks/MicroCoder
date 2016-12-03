@@ -11,6 +11,10 @@ class ShopController
     public function current($R, $PS)
     {
 //        ob_start();
+//        dump($R->RouterHost);
+        \d::d($R);
+        \d::d($R);
+        \d::d($R);
         \d::p($R->Route);
 //        echo $PS['id'] . '<br>';
 //        echo $PS['id1'] . '<br>';
