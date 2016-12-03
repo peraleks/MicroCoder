@@ -11,7 +11,7 @@ require MICRO_DIR.'/vendor/zdorovo/micro/Micro/Autoload/Autoloader.php';
 
     ->globalClass('/vendor/zdorovo/micro/Micro/Debug/d.php', ['d'])
 
-//	 ->psr4( '', '/vendor/zdorovo/micro/Micro/Debug')->next()
+	 ->psr4( '', '/vendor/zdorovo/micro/Micro/Debug')->next()
 
 
 	->psr4( 'Psr\Http\Message'	, '/vendor/psr/http-message/src')
