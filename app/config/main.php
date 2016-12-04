@@ -9,6 +9,9 @@ isset($DevelopmentIp[$_SERVER['REMOTE_ADDR']])
     ? define('MICRO_DEVELOPMENT', true)
     : define('MICRO_DEVELOPMENT', false);
 
+// режим обслуживания | maintenance mode
+// включает для всех кроме DevelopmentIp
+// require MICRO_DIR.'/app/maintenance.php';
 
 define('MICRO_LOCALE', 'ru');
 
