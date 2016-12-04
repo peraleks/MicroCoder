@@ -12,10 +12,10 @@ class ShopController
     {
 //        ob_start();
 //        dump($R->RouterHost);
-        \d::d($R);
-        \d::d($R);
-        \d::d($R);
-        \d::p($R->Route);
+//        \d::d($R);
+//        \d::d($R);
+        \d::d($R->Route);
+//        \d::p($R->Route);
 //        echo $PS['id'] . '<br>';
 //        echo $PS['id1'] . '<br>';
 //        echo $PS['id2'] . '<br>';

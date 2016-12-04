@@ -18,5 +18,3 @@ require MICRO_DIR.'/vendor/zdorovo/micro/Micro/Autoload/Autoloader.php';
 //	 ->psr4( '', '/vendor/zdorovo/micro/Micro/Debug')->next()
 
 ;# Autoloader .................................................................
-
-include MICRO_DIR.'/vendor/symfony/var-dumper/Resources/functions/dump.php';
