@@ -14,12 +14,12 @@ $errorHandler #----------------------------------------------------------------
 
 ->setHeaderMessage
 ([
-	'marker'  => 1,
-	'header'  => '500 Internal Server Error',
-	'message' => [
-					'Ошибка на странице',
-					'Page Error',
-				 ]
+    'marker'  => 1,
+    'header'  => '500 Internal Server Error',
+    'message' => [
+        'Ошибка на странице',
+        'Page Error',
+    ]
 ])
 
 ;# $errorHandler ..............................................................

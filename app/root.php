@@ -14,7 +14,8 @@ use MicroMir\Http\{
 };
 
 use MicroMir\Providers\{
-    ResponseFactory
+    ResponseFactory,
+    RequestServiceProvaider
 };
 
 use MicroMir\Stages\{
@@ -37,28 +38,28 @@ use Zend\Diactoros\{
     Response,
     Response\SapiEmitter
 };
+if (!function_exists('c')) { function c() { return Root::instance(); } }
 
-($R = Root::instance()) #------------- Корневой реестр ------------------------
+($c = Root::instance()) #-------------------- Контейнер --------------------------------
 
-->link('Emitter'		, function()  { return new SapiEmitter; 						})
-->link('Request'		, function()  { return 	   ServerRequestFactory::fromGlobals(); })
-//->link('Response'		, function()  { return new Response;                            })
-->link('ResponseFactory', function()  { return new ResponseFactory; 					})
-->link('Route'			, function()  { return new Route; 								})
-->link('RouterHelper'	, function($R){ return new RouterHelper($R); 					})
-->link('RouterHost'		, function($R){ return new RouterHost($R); 						})
-->link('StageController', function($R){ return new StageController($R); 				})
-->link('Verbs'			, function()  { return new Verbs; 								})
-
-
-->func('nameToUrl', 'RouterHelper', 'getUrl')
+->link('Emitter'		, SapiEmitter::class)
+->link('Request'		, ServerRequest::class, RequestServiceProvaider::class)
+->link('ResponseFactory', ResponseFactory::class)
+->link('Route'			, Route::class)
+->link('RouterHelper'	, RouterHelper::class)
+->link('RouterHost'		, RouterHost::class)
+->link('StageController', StageController::class)
+->link('Verbs'			, Verbs::class)
 
 
+//    ->func('nameToUrl', 'RouterHelper', 'getUrl')
 
-;# Root .......................................................................
-$errorHandler->setRoot($R); # зависимость для обнаружения инверсии func() .....
 
-$R->StageController #----------------------------------------------------------
+
+;# Root .................................................................................
+$errorHandler->setRoot($c); # зависимость для обнаружения инверсии func() ...............
+
+$c->StageController #--------------------------------------------------------------------
 
 ->stages([
     MethodNotImplemented501::class,
@@ -73,4 +74,5 @@ $R->StageController #----------------------------------------------------------
     LogStage::class,
 ])
 
-->nextStage();# StageController ...............................................
+->nextStage();# StageController .........................................................
+//d::d($R);
