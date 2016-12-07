@@ -1,6 +1,7 @@
 <?php
 namespace MicroModules\Example\Controllers;
 
+use MicroMir\Container\Container;
 use MicroMir\Root\Root;
 use MicroMir\Routing\Route;
 use Zend\Diactoros\Response\SapiEmitter;
@@ -12,9 +13,9 @@ class ShopController
     {
     }
 
-    public function current(Route $Route, $Emitter, array $a = null)
+    public function current(Route $Route, $Emitter, Container $c)
     {
-        \d::p($Route);
+        \d::p($c->get('Verbs'));
 //        ob_start();
 //        dump($R->RouterHost);
 //        \d::d($R);

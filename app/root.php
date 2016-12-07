@@ -1,6 +1,6 @@
 <?php
-use MicroMir\Root\{
-    Root
+use MicroMir\Container\{
+    Container
 };
 
 use MicroMir\Routing\{
@@ -38,18 +38,18 @@ use Zend\Diactoros\{
     Response,
     Response\SapiEmitter
 };
-if (!function_exists('c')) { function c() { return Root::instance(); } }
+if (!function_exists('c')) { function c() { return Container::getInstance(); } }
 
-($c = Root::instance()) #-------------------- Контейнер --------------------------------
+($c = Container::getInstance()) #-------------------- Контейнер --------------------------------
 
-->link('Emitter'		, SapiEmitter::class)
-->link('Request'		, ServerRequest::class, RequestServiceProvaider::class)
-->link('ResponseFactory', ResponseFactory::class)
-->link('Route'			, Route::class)
-->link('RouterHelper'	, RouterHelper::class)
-->link('RouterHost'		, RouterHost::class)
-->link('StageController', StageController::class)
-->link('Verbs'			, Verbs::class)
+->bind('Emitter'		, SapiEmitter::class)
+->bind('Request'		, ServerRequest::class  , RequestServiceProvaider::class)
+->bind('ResponseFactory', ResponseFactory::class)
+->bind('Route'			, Route::class)
+->bind('RouterHelper'	, RouterHelper::class)
+->bind('RouterHost'		, RouterHost::class)
+->bind('StageController', StageController::class)
+->bind('Verbs'			, Verbs::class)
 
 
 //    ->func('nameToUrl', 'RouterHelper', 'getUrl')
@@ -57,7 +57,7 @@ if (!function_exists('c')) { function c() { return Root::instance(); } }
 
 
 ;# Root .................................................................................
-$errorHandler->setRoot($c); # зависимость для обнаружения инверсии func() ...............
+//$errorHandler->setRoot($c); # зависимость для обнаружения инверсии func() ...............
 
 $c->StageController #--------------------------------------------------------------------
 
@@ -75,4 +75,4 @@ $c->StageController #-----------------------------------------------------------
 ])
 
 ->nextStage();# StageController .........................................................
-//d::d($R);
+//d::d($c);
